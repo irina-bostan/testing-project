@@ -26,7 +26,7 @@ public class ArrayUtils {
         }
 
         for (int i = 0; i < numbers.length; i++) {
-            if (numbers[i] * numbers[i] == target) {
+            if (Math.pow(numbers[i], 2) == target) {
                 return Optional.of(i);
             }
         }
@@ -54,7 +54,7 @@ public class ArrayUtils {
         }
 
         for (int i = 0; i < numbers.length; i++) {
-            if (numbers[i] != null && numbers[i] * numbers[i] == target) {
+            if (numbers[i] != null && Math.pow(numbers[i], 2) == target) {
                 return Optional.of(i);
             }
         }
@@ -79,7 +79,7 @@ public class ArrayUtils {
         }
 
         for (int i = 0; i < numbers.length; i++) {
-            if (Math.abs(numbers[i] * numbers[i] - target) < epsilon) {
+            if (Math.abs(Math.pow(numbers[i], 2) - target) < epsilon) {
                 return Optional.of(i);
             }
         }
